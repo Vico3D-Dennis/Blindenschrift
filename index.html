@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="de"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="theme-color" content="#000000" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;VicoCard – Hinweis&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Barrierefreie Hinweistafel mit Vorlesefunktion." /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#000;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--fg:#fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted:#cfcfcf;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent:#ffd400; /* gut sichtbar */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--danger:#ff4d4d;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ok:#3ddc84;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>--radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--pad:22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--max:860px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--shadow: 0 10px 24px rgba(0,0,0,.35);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{ box-sizing:border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>html,body{ height:100%; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--fg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: .2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>a{ color: var(--accent); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrap{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: var(--max);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction:column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>header{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 4px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.brand{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chip{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid rgba(255,255,255,.25);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 6px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>main{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.06);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid rgba(255,255,255,.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: var(--pad);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 0 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 34px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: .3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.meta{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.content{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(0,0,0,.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid rgba(255,255,255,.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 16px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 24px; /* groß für Sehbehinderte */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.content p{ margin: 0 0 14px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.content p:last-child{ margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.actions{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>appearance:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#000;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-secondary{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--fg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid rgba(255,255,255,.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-danger{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,77,77,.18);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--fg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid rgba(255,77,77,.45);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.status{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 1.4em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.row{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>label{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>select, input[type="range"]{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid rgba(255,255,255,.18);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(0,0,0,.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--fg);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 4px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Fokus sichtbar für Tastatur &amp; Barrierefreiheit */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:focus, select:focus, a:focus{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>outline: 4px solid rgba(255,212,0,.6);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>outline-offset: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (min-width: 720px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h1{ font-size: 40px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.actions{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="brand" aria-label="VicoCard barrierefreier Hinweis"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="chip"&gt;VicoCard&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;Barrierefreier Hinweis – mit Vorlesefunktion&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1 id="title"&gt;Spa &amp; Wellness&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="meta" id="subtitle"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Tippe auf „Text vorlesen“ und höre alle Infos laut.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Der Text, der vorgelesen wird --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;section class="content" aria-labelledby="title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="readText"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;strong&gt;Öffnungszeiten Spa:&lt;/strong&gt; täglich von 07:00 bis 22:00 Uhr.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;strong&gt;Sauna:&lt;/strong&gt; ab 16 Jahren. Bitte Badelatschen verwenden.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;strong&gt;Handtücher:&lt;/strong&gt; erhältst du kostenlos an der Rezeption.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;strong&gt;Hilfe:&lt;/strong&gt; Für Unterstützung wähle bitte die Hotelnummer oder drücke unten „Rezeption anrufen“.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Sprach-/Vorlese-Controls --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="row" role="group" aria-label="Vorlese-Einstellungen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="flex:1; min-width:260px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label for="voiceSelect"&gt;Stimme auswählen&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;select id="voiceSelect" aria-label="Stimme auswählen"&gt;&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="flex:1; min-width:260px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label for="rate"&gt;Sprechgeschwindigkeit&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input id="rate" type="range" min="0.7" max="1.3" step="0.05" value="1.0" aria-label="Sprechgeschwindigkeit" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="actions" aria-label="Aktionen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-primary" id="btnSpeak" type="button"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>🔊 Text vorlesen</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-secondary" id="btnStop" type="button"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>⏹️ Stopp</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Optional: Direkt-Hilfe (Nummer anpassen) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn-danger" id="btnCall"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>href="tel:+493012345678"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>style="display:block; text-align:center; text-decoration:none; padding:18px; border-radius:18px; font-size:22px; font-weight:800;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>📞 Rezeption anrufen</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Optional: Mehr Infos / Webseite --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn-secondary"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>href="https://example.com/spa"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>style="display:block; text-align:center; text-decoration:none; padding:18px; border-radius:18px; font-size:22px; font-weight:800;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>ℹ️ Mehr Infos öffnen</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="status" id="status" role="status" aria-live="polite"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Hinweis: Wenn die Vorlesefunktion nicht startet, prüfe die Lautstärke und tippe erneut auf „Text vorlesen“.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Unterstützt VoiceOver (iPhone) und TalkBack (Android).</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// --- Web Speech API: Vorlesen ---</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const statusEl = document.getElementById("status");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const voiceSelect = document.getElementById("voiceSelect");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rateInput = document.getElementById("rate");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btnSpeak = document.getElementById("btnSpeak");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btnStop = document.getElementById("btnStop");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function setStatus(msg){ statusEl.textContent = msg || ""; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getReadableText(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Nimmt nur den reinen Text aus dem Bereich</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const el = document.getElementById("readText");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return (el?.innerText || "").trim();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function populateVoices(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(!("speechSynthesis" in window)){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setStatus("Vorlesen wird von diesem Browser leider nicht unterstützt.");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btnSpeak.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const voices = window.speechSynthesis.getVoices() || [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>voiceSelect.innerHTML = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Nur Deutsch zuerst, dann alles</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const deVoices = voices.filter(v =&gt; (v.lang || "").toLowerCase().startsWith("de"));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const list = deVoices.length ? deVoices : voices;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>list.forEach((v, i) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const opt = document.createElement("option");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>opt.value = v.name;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>opt.textContent = `${v.name} (${v.lang})`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>voiceSelect.appendChild(opt);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>setStatus("Bereit. Tippe auf „Text vorlesen“.");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function speak(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(!("speechSynthesis" in window)){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setStatus("Vorlesen wird nicht unterstützt.");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// laufende Wiedergabe stoppen und neu starten</p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.speechSynthesis.cancel();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const text = getReadableText();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(!text){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setStatus("Kein Text gefunden.");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const utter = new SpeechSynthesisUtterance(text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const voices = window.speechSynthesis.getVoices() || [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const selected = voiceSelect.value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const chosen = voices.find(v =&gt; v.name === selected);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(chosen) utter.voice = chosen;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>utter.lang = chosen?.lang || "de-DE";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>utter.rate = parseFloat(rateInput.value || "1.0");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>utter.onstart = () =&gt; setStatus("Vorlesen läuft …");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>utter.onend = () =&gt; setStatus("Fertig vorgelesen.");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>utter.onerror = () =&gt; setStatus("Vorlesen konnte nicht gestartet werden. Bitte erneut tippen.");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.speechSynthesis.speak(utter);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function stop(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if("speechSynthesis" in window){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.speechSynthesis.cancel();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setStatus("Gestoppt.");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>btnSpeak.addEventListener("click", speak);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btnStop.addEventListener("click", stop);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Stimmen laden (Browser lädt asynchron; daher onvoiceschanged)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if("speechSynthesis" in window){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.speechSynthesis.onvoiceschanged = populateVoices;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>populateVoices();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>populateVoices();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
